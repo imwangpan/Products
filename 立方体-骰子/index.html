@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			body{
+				background: #000000;
+			}
+			#box{
+				perspective: 800px;
+			}
+			ul{
+				width: 200px;
+				height: 200px;
+				position: relative;
+				margin: 200px auto;
+				/*border: 5px solid #19dccc;
+				box-shadow: 0 0 50px #19dccc;*/		/*写代码过程中参照物*/
+				/*transform: rotateX(60deg);*/		/*通过设置 ul 一定的倾斜角度，方便观察 li 的位置*/
+				
+				transform-style: preserve-3d;
+				animation: 6s move linear infinite;
+			}
+			ul li{
+				width: 200px;
+				height: 200px;
+				text-align: center;
+				font: 100px/200px "微软雅黑";
+				color: #FFFFFF;
+				position: absolute;
+				border: 5px solid #19dccc;
+				box-shadow: 0 0 50px #19dccc;
+			}
+			ul li:nth-child(1){
+				transform: translateZ(100px);
+			}
+			ul li:nth-child(6){
+				transform: translateZ(-100px) rotateY(180deg);
+			}
+			ul li:nth-child(2){
+				transform: translateX(100px) rotateY(90deg);
+			}
+			ul li:nth-child(5){
+				transform: translateX(-100px) rotateY(-90deg);
+			}
+			ul li:nth-child(3){
+				transform: translateY(-100px) rotateX(90deg);
+			}
+			ul li:nth-child(4){
+				transform: translateY(100px) rotateX(-90deg);
+			}
+			
+			@keyframes move{
+				100%{
+					transform: rotateX(360deg) rotateY(360deg)  rotateZ(360deg);
+				}
+			}
+			ul:hover{
+				animation-play-state: paused;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+			</ul>
+		</div>
+	</body>
+</html>
