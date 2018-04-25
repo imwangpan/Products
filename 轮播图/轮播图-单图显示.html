@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			ul li img{
+				vertical-align: middle;
+			}
+			ul li{
+				float: left;
+			}
+			#box{
+				width: 300px;
+				height: 300px;
+				border: 10px solid rgba(0,0,0,0.2);
+				margin: 200px auto;
+				overflow: hidden;
+				position: relative;
+			}
+			#box ul{
+				width: 1800px;
+				overflow: hidden;
+				position: absolute;
+				left: 0;
+				animation: 10s move ease-in-out infinite;
+			}
+			@keyframes move{
+				10%{
+					left: -300px;
+				}
+				20%{
+					left: -300px;
+				}
+				30%{
+					left: -600px;
+				}
+				40%{
+					left: -600px;
+				}
+				50%{
+					left: -900px;
+				}
+				60%{
+					left: -900px;
+				}
+				70%{
+					left: -1200px;
+				}
+				80%{
+					left: -1200px;
+				}
+				90%{
+					left: -1500px;
+				}
+				100%{
+					left: -1500px;
+				}
+			}
+			#box:hover ul{
+				animation-play-state: paused;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li><img src="../img/x6.png"/></li>
+				<li><img src="../img/x7.png"/></li>
+				<li><img src="../img/x8.png"/></li>
+				<li><img src="../img/x9.png"/></li>
+				<li><img src="../img/x10.png"/></li>
+				
+				<li><img src="../img/x6.png"/></li>
+			</ul>
+		</div>
+	</body>
+</html>
