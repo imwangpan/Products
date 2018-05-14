@@ -1,0 +1,32 @@
+/*
+ * 先手动敲各个小方块，观察一下规律
+ * 所有小方块除了position（left、top）、background-position 有区别外，其它样式一样。小方块间距设置为 5px。
+ * 同一行 top 值相同，left 值为 (100+5)*(n-1)
+ * 同一列 left 值相同，top 值为 (100+5)*(n-1)
+ * 
+ * 第 i 行第 j 列：top 值为 (i-1)*105，left 值为 (j-1)*105\
+ * background-position: (j-1)*100 (i-1)*100;
+ * 
+ * 半透明图片怎么实现？
+ * 通过给元素设置 opacity 实现背景图片半透明效果。如果有更负责的样式需求，可以在小图片上叠加一个叠加层元素。
+ * */
+
+ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+#box{
+	width: 1045px;
+	height: 1045px;
+	margin: 0 auto;
+	position: relative;
+}
+#box li.img{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	background-image: url(img/1000.jpg);
+	opacity: 0.3;
+	transition: 0.3s transform linear;
+}
