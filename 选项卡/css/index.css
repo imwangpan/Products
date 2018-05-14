@@ -1,0 +1,42 @@
+ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+p{
+	margin: 0;
+}
+#box{
+	width: 260px;
+	background: #ed6355;
+	margin: 50px auto;
+	box-shadow: 0 0 50px black;
+}
+#box li p{
+	color: #FFFFFF;
+	font: 18px/50px "微软雅黑";
+	text-indent: 31px;
+	overflow: hidden;		/*清除浮动*/
+}
+#box li p:hover{
+	background: #ed7f55;
+}
+#box li p span{
+	color: #FFFFFF;
+	font: 18px/50px "微软雅黑";
+	float: right;
+	margin-right: 32px;
+	cursor: pointer;		/*鼠标指针为手指*/
+	-webkit-user-select: none;		/*取消双击选中*/
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+#box li ul li{
+	background: #383838;
+	color: #FFFFFF;
+	font: 14px/40px "微软雅黑";
+	text-indent: 70px;
+}
+#box li ul{
+	display: none;
+}
