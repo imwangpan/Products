@@ -1,0 +1,136 @@
+ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+h3,p{
+	margin: 0;
+}
+input{
+	padding: 0;
+	outline: none;
+}
+#lzt{
+	width: 910px;
+	height: 443px;
+	margin: 200px auto;
+	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 0 50px #000000;
+}
+#lzt #lztPic{
+	position: absolute;
+	margin-right: 20px;
+	/*border-radius: 20px;*/
+}
+#lzt #left,#lzt #right{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: rgba(0,0,0,0.3);
+	color: #FFFFFF;
+	font: bold 50px/40px "微软雅黑";
+	border-radius: 5px;
+	text-align: center;
+	transition: 0.3s transform linear;
+}
+#lzt #left{
+	top: 200px;
+	left: 20px;
+}
+#lzt #right{
+	top: 200px;
+	left: 640px;
+}
+#lzt #left:hover,#lzt #right:hover{
+	background: rgba(0,0,0,0.5);
+	transform: scale(1.2);
+}
+#lzt ul{
+	position: absolute;
+	left: 270px;
+	bottom: 20px;
+	/*background: black;*/
+}
+#lzt ul li{
+	float: left;
+}
+#lzt ul li a{
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	background: #a3903e;
+	border: 2px solid #FFFFFF;
+	border-radius: 50%;
+	margin: 0 10px;
+}
+#lzt ul li a.active,#lzt ul li a:hover{
+	background: #f56a19;
+	transform: scale(1.5);
+}
+#lzt h3{
+	position: absolute;
+	right: 0;
+	width: 180px;
+	font: 30px/80px "微软雅黑";
+	color: #333333;
+}
+#lzt h3 span{
+	font-size: 20px;
+	margin-left: 10px;
+	color: #d1a859;
+}
+#lzt p{
+	position: absolute;
+	right: 20px;
+	top: 80px;
+	width: 160px;
+	font: 22px/44px "微软雅黑";
+	color: #666666;
+}
+#lzt input{
+	width: 100px;
+	height: 36px;
+	position: absolute;
+	right: 50px;
+	border: 1px solid #b7b7b7;
+	background: #f4f4f4;
+	color: #606060;
+	font: 20px/34px "微软雅黑";
+	border-radius: 5px;
+	box-shadow: 0 0 10px #b7b7b7;
+	transition: 0.3s transform linear;
+}
+#lzt #sxqh{
+	bottom: 130px;
+}
+#lzt #xhqh{
+	bottom: 75px;
+}
+#lzt #zdlb{
+	bottom: 20px;
+}
+ #lzt input.active,#lzt input:hover{
+	border: 1px solid #b7b7b7;
+	background: #606060;
+	color: #f4f4f4;
+}
+
+/*动画效果关键帧*/
+@keyframes twinkle{
+	0%{
+		transform: scale(1);
+	}
+	25%{
+		transform: scale(1.3);
+	}
+	50%{
+		transform: scale(1);
+	}
+	75%{
+		transform: scale(1.6);
+}
