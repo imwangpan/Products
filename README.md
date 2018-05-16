@@ -17,3 +17,5 @@
 [背景图片网格放大效果](https://imwangpan.github.io/Products/%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E7%BD%91%E6%A0%BC%E6%94%BE%E5%A4%A7%E6%95%88%E6%9E%9C/index.html)
 
 [商品结算页](https://imwangpan.github.io/Products/%E5%95%86%E5%93%81%E7%BB%93%E7%AE%97%E9%A1%B5/index.html)
+
+[日历时钟](https://imwangpan.github.io/Products/%E6%97%A5%E5%8E%86%E6%97%B6%E9%92%9F/index.html)
