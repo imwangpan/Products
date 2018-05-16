@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div,ul,li,h3,p{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 710px;
+				height: 443px;
+				margin: 30px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			#box ul{
+				position: absolute;
+				left: 0;
+			}
+			#box li{
+				list-style: none;
+				float: left;
+			}
+			#box div{
+				height: 70px;
+				width: 100%;
+				background: rgba(0,0,0,0.6);
+				position: absolute;
+				bottom: 0;
+				font-family: "微软雅黑";
+				color: #fff;
+				text-indent: 20px;
+			}
+			#box div h3{
+				line-height: 40px;
+			}
+		</style>
+		<script src="js/move.js"></script>
+		<script>
+			window.onload=function(){
+				var box=document.getElementById("box");
+				var ul=document.querySelector("ul");
+				var div=document.querySelector("#box div");
+				var timer;
+				var n=0;
+				
+				var textArr=[
+					{"title":'精选包包',"content":'别说没告诉你：返校季，包，治百病。快给我来一打！'},
+					{"title":'女士服装',"content":'自古套路得人心，换季时节的万能穿搭套路你会了吗？'},
+					{"title":'西装外套',"content":'娘 Man 平衡小西装，柔美、帅气在此刻合二为一。'},
+					{"title":'女士皮鞋',"content":'一年四季都好搭的小皮鞋，所有人的鞋柜都必不可少。'},
+					{"title":'牛仔外套',"content":'秋季当然少不了牛仔外套。听说枫叶和牛仔更搭哦！'}
+				];
+				
+				//设置ul的宽度，能让所有的li在一行中显示
+				ul.innerHTML+=ul.innerHTML;
+				var lis=document.querySelectorAll("li");
+				var w=parseInt(getComputedStyle(lis[0]).width);
+				ul.style.width=w*lis.length+'px';
+				
+				//把文字放在图片上
+				div.innerHTML='<h3>'+textArr[0].title+'</h3><p>'+textArr[0].content+'</p>';
+				
+				//初始时让图片、文字停留 1s 后再开始运动
+				setTimeout(function(){
+					pic();
+					timer=setInterval(pic,3000);		//这个时间内，一个完整的运动要完成
+				},1000)
+				
+				function pic(){
+					n++;
+					move(div,{'bottom':-70},500,'linear',function(){
+						move(ul,{'left':-n*w},1000,'linear',function(){
+							if(n==lis.length/2){
+								//这个条件满足的时候说明第二份的第一张图进入了盒子里，需要让ul回到0了
+								ul.style.left=0;
+								n=0;
+							}
+							
+							div.innerHTML='<h3>'+textArr[n].title+'</h3><p>'+textArr[n].content+'</p>';
+							move(div,{'bottom':0},500,'linear');
+						});
+					});
+				}
+				
+				box.onmouseenter=function(){
+					clearInterval(timer);
+					clearInterval(timer1);
+				};
+				
+				box.onmouseleave=function(){
+					//鼠标离开之后，延迟一定时间调用函数、开启定时器。这里设置延迟还有另外一个好处：能够避免鼠标快速移入、移出时，频繁调用函数 pic() 造成异常。
+					//并不能完全解决鼠标移入、移出导致频繁调用函数 pic() 造成异常。因为用户鼠标移入、移出的时间间隔不可控。除非将间隔时间设置为 2s，也就是函数 pic 里所有运动走完的时间
+					timer1=setTimeout(function(){
+						pic();		//这里先调用一下函数，避免鼠标离开后 3s 后才通过定时器调用函数，等待运动时间过长
+						timer=setInterval(pic,3000);
+					},300)
+				};
+				
+				/*下面这种写法没有 bug，但是在鼠标移出后需要等待较长时间（3s）才会开始运动
+				box.onmouseleave=function(){
+					timer=setInterval(pic,3000);
+				};
+				*/
+			};
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li><img src="img/p1.jpg" alt="" /></li>
+				<li><img src="img/p2.jpg" alt="" /></li>
+				<li><img src="img/p3.jpg" alt="" /></li>
+				<li><img src="img/p4.jpg" alt="" /></li>
+				<li><img src="img/p5.jpg" alt="" /></li>
+			</ul>
+			<div>	
+				<h3></h3>
+				<p></p>
+			</div>
+		</div>
+	</body>
+</html>
