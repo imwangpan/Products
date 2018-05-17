@@ -1,4 +1,4 @@
-*{
+ul{
 	margin: 0;
 	padding: 0;
 }
@@ -24,8 +24,13 @@ li{
 }
 .time2{
 	height: 38px;
+	width: 205px;
 	font: 18px/38px "微软雅黑";
 	color: #429ce3;
+	cursor: pointer;
+}
+.time2:hover{
+	color: #52ace3;
 }
 .time3{
 	height: 53px;
@@ -47,6 +52,9 @@ li{
 	font-size: 45px;
 	cursor: pointer;
 	margin: 0 10px 0 10px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 }
 .time3 div span:hover{
 	color: #FFFFFF;
