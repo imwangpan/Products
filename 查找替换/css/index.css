@@ -1,13 +1,9 @@
 body {
 	margin: 0;
-	padding: 0;
 	background: #ecf9fc;
 }
-/*p {
+p{
 	margin: 0;
-}*/
-textarea span{
-	background: yellow;
 }
 #wrap {
 	width: 680px;
@@ -30,21 +26,23 @@ textarea span{
 	border:1px solid #abdde7;
 	float: left;
 }
-/*因为这里需要文本框 textarea 根据内容多少来自动显示滚动条，所以不能给 textarea 设置 overflow: hidden;。但是在这里需要给文本框设置一个圆角效果，然而当出现滚动条时，滚动条会超出文本框的圆角边框显示。解决方法是给文本框加了一个父级，给这个父级设置边框、圆角以及 overflow: hidden;*/
-#wrap textarea{
-	/*border:1px solid #abdde7;*/
-	border: none;
+/*因为文本框 textarea 里无法解析 HTML 标签，所以改用 p 标签，由于需要内容可编辑，所以将 p 标签的 contenteditable 属性值设置 true（在标签中设置）。
+ * 因为这里需要文本框需要根据内容多少来自动显示滚动条，所以不能设置 overflow: hidden;，而是要设置 overflow: auto;。但是在这里需要给文本框设置一个圆角效果，然而当出现滚动条时，滚动条会超出文本框的圆角边框显示。解决方法是给文本框加了一个父级，让这个父级的宽高和文本框相等，然后给这个父级设置边框、圆角以及 overflow: hidden;，这样就不需要给文本框设置相关样式了，且能正确显示圆角样式。*/
+#wrap p{
+	/*border:1px solid #abdde7;
+	border-radius: 5px;*/
 	background: #eef8fa;
-	/*border-radius: 5px;*/
 	width: 500px;
 	height: 180px;
 	padding: 20px;
 	font-family: '微软雅黑';
 	font-size: 20px;
 	line-height: 36px;
-	/*float: left;*/
-	resize: none;		/*去除文本框右下角可缩放标示*/
+	overflow: auto;		/*根据内容长度自动显示滚动条*/
 	outline:none;		/*去除文本框获取焦点时边框高亮效果*/
+}
+#wrap p span{
+	background: yellow;
 }
 #buttons {
 	float: right;
@@ -120,7 +118,6 @@ textarea span{
 	background: #9fe7a9;
 	color: #fff;
 }
-
 
 #toolbox span {
 	font-family: '微软雅黑';
