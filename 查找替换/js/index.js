@@ -46,7 +46,7 @@ inputs[1].onclick=function(){
 	
 	
 	//2、用户有输入内容，但是没找到，依然弹窗提示
-	if(texts.innerHTML.indexOf(val)==-1){
+	if(texts.innerHTML.indexOf(val)==-1){		//比较时是直接通过 innerHTML 获取到最新的内容，这样文本框中的内容发送变化时，也能正确比较
 		alert('你输入的内容没有找到');
 		inputs[0].value='';
 		return;
