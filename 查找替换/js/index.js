@@ -5,7 +5,7 @@ var toolbox=document.getElementById("toolbox");
 var spans=document.querySelectorAll("#toolbox span");
 var close=document.getElementById("close");
 var inputs=document.querySelectorAll("#toolbox input");
-var p=document.querySelector("p");
+var texts=document.querySelector("#wrap #text p");
 
 //右侧点击展开
 show.onclick=function(){
@@ -31,6 +31,7 @@ as[1].onclick=spans[1].onclick=function(){
 //关闭
 close.onclick=function(){
 	toolbox.style.display=span.style.display='none';
+	removeSpan();
 };
 
 //下面查找功能
@@ -45,7 +46,7 @@ inputs[1].onclick=function(){
 	
 	
 	//2、用户有输入内容，但是没找到，依然弹窗提示
-	if(p.innerHTML.indexOf(val)==-1){
+	if(texts.innerHTML.indexOf(val)==-1){
 		alert('你输入的内容没有找到');
 		inputs[0].value='';
 		return;
@@ -54,9 +55,9 @@ inputs[1].onclick=function(){
 	//3、用户有输入内容并且找到了，标个黄
 	removeSpan();		//把之前标黄的字去掉黄色
 	
-	var result=p.innerHTML.split(val);
+	var result=texts.innerHTML.split(val);
 	//console.log(result);
-	p.innerHTML=result.join('<span>'+val+'</span>');
+	texts.innerHTML=result.join('<span>'+val+'</span>');
 	inputs[0].value='';
 };
 
@@ -71,7 +72,7 @@ inputs[4].onclick=function(){
 	}
 	
 	//2、第一个框里用户输入了内容，但是找不到。弹窗提示
-	if(p.innerHTML.indexOf(val1)==-1){
+	if(texts.innerHTML.indexOf(val1)==-1){
 		alert('您输入的内容没找到');
 		return;
 	}
@@ -88,9 +89,9 @@ inputs[4].onclick=function(){
 	}
 	
 	//4、第一个框里用户输入了内容并且找到了，第二个框里有内容，替换功能
-	var text=p.innerHTML.split(val1);
+	var text=texts.innerHTML.split(val1);
 	//console.log(result);
-	p.innerHTML=text.join(val2);
+	texts.innerHTML=text.join(val2);
 	inputs[2].value=inputs[3].value='';
 };
 
@@ -111,11 +112,11 @@ function removeSpan(){
 	
 	
 	//去除span标签
-	var strArr=p.innerHTML.split('<span>');
+	var strArr=texts.innerHTML.split('<span>');
 	strArr=strArr.join('');
 	
 	strArr=strArr.split('<span/>');
 	strArr=strArr.join('');
 	
-	p.innerHTML=strArr;
+	texts.innerHTML=strArr;
 }
