@@ -1,3 +1,7 @@
+/*
+ * 查找替换的原理：（待完善）
+ * 利用字符串方法 split() 进行查找，数组方法进行拼接
+ */
 var show=document.getElementById("show");
 var span=document.querySelector("#buttons span");
 var as=span.querySelectorAll('a');
