@@ -21,3 +21,5 @@
 [日历时钟](https://imwangpan.github.io/Products/%E6%97%A5%E5%8E%86%E6%97%B6%E9%92%9F/index.html)
 
 [数组排序照片墙](https://imwangpan.github.io/Products/%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%E7%85%A7%E7%89%87%E5%A2%99/index.html)
+
+[查找替换](https://imwangpan.github.io/Products/%E6%9F%A5%E6%89%BE%E6%9B%BF%E6%8D%A2/index.html)
