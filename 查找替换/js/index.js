@@ -1,10 +1,9 @@
 /*
- * 查找替换的原理：（待完善）
- * 利用字符串方法 indexOf() split() 进行查找，数组方法进行拼接
+ * 查找替换的原理：用字符串方法 indexOf() 查找内容，用字符串方法 split() 将字符串分割成数组，用数组方法 join() 将数组连接成字符串
+ * 
  * 字符串.indexOf() 通过字符找下标，没找到返回 -1
  * 字符串.split(分隔符) 用指定的分隔符把字符串分割成数组
  * 数组.join(连接符) 用指定的连接符将数组中的所有数据连接成一个字符串
- * 
  */
 var show=document.getElementById("show");
 var span=document.querySelector("#buttons span");
@@ -105,6 +104,7 @@ inputs[4].onclick=function(){
 			return;
 		}
 	}
+	//如果用户点击了确认按钮，那么代码将继续向下走，就是用第二个输入框的内容（为空）替换第一个输入框里的内容，也就是删除相关内容
 	
 	//4、第一个框里用户输入了内容并且找到了，第二个框里有内容，那么就用后者替换前者
 	var text=texts.innerHTML.split(val1);		//把第一个输入框里的内容作为分隔符将被查找的文本分割成数组
