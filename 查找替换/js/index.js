@@ -106,11 +106,11 @@ inputs[4].onclick=function(){
 		}
 	}
 	
-	//4、第一个框里用户输入了内容并且找到了，第二个框里有内容，替换功能
-	var text=texts.innerHTML.split(val1);
+	//4、第一个框里用户输入了内容并且找到了，第二个框里有内容，那么就用后者替换前者
+	var text=texts.innerHTML.split(val1);		//把第一个输入框里的内容作为分隔符将被查找的文本分割成数组
 	//console.log(result);
-	texts.innerHTML=text.join(val2);
-	inputs[2].value=inputs[3].value='';
+	texts.innerHTML=text.join(val2);		//把第二个输入框的内容作为连接符将之前分割的数组连接成字符串，并把结果赋值给被查找的文本
+	inputs[2].value=inputs[3].value='';		//清空两个输入框里的内容
 };
 
 //清除内容中高亮背景，也就是去除 span 标签
