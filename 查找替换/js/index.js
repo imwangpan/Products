@@ -13,7 +13,8 @@ var texts=document.querySelector("#wrap #text p");
 
 //右侧点击展开
 show.onclick=function(){
-	span.style.display='block';
+	show.innerHTML=show.innerHTML=='展开'?'收拢':'展开';
+	span.style.display=span.style.display=='block'?'none':'block';
 };
 
 //查找
