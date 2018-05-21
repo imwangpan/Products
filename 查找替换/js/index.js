@@ -115,12 +115,11 @@ inputs[4].onclick=function(){
 
 //清除内容中高亮背景，也就是去除 span 标签
 function removeSpan(){
-	//清除input里的内容
+	//清除输入框里的内容
 	var inputTexts=document.querySelectorAll("#toolbox input[type=text]");
 	for(var i=0;i<inputTexts.length;i++){
 		inputTexts[i].value='';
 	}
-	
 	
 	/*'种直译式<span>脚本语言</span>，是一种动态类型'
 	['种直译式','脚本语言</span>，是一种动态类型']
@@ -128,8 +127,8 @@ function removeSpan(){
 	['种直译式脚本语言','，是一种动态类型']
 	'种直译式脚本语言，是一种动态类型'*/
 	
-	
 	//去除 span 标签
+	//清除 span 标签时需要注意开始标签和结束标签要分别清除
 	var strArr=texts.innerHTML.split('<span>');
 	strArr=strArr.join('');
 	
