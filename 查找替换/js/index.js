@@ -13,8 +13,15 @@ var texts=document.querySelector("#wrap #text p");
 
 //右侧点击展开
 show.onclick=function(){
-	show.innerHTML=show.innerHTML=='展开'?'收拢':'展开';
-	span.style.display=span.style.display=='block'?'none':'block';
+	/*show.innerHTML=show.innerHTML=='展开'?'收拢':'展开';
+	span.style.display=span.style.display=='block'?'none':'block';*/
+	if(span.style.display=='block'){
+		show.innerHTML='展开'
+		toolbox.style.display=span.style.display='none'
+	}else{
+		show.innerHTML='收拢'
+		span.style.display='block'
+	}
 };
 
 //查找
@@ -35,6 +42,7 @@ as[1].onclick=spans[1].onclick=function(){
 
 //关闭
 close.onclick=function(){
+	show.innerHTML='展开'
 	toolbox.style.display=span.style.display='none';
 	removeSpan();
 };
