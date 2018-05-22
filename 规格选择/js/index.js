@@ -1,3 +1,7 @@
+/*
+ * 这里是用的添加、去除子节点的方式来实现已选条件的显示与否，这种方法先选择的规格在最前面，后选择的规格在后面。
+ * 也可以先将已选条件的标签写好，通过改变 display 来实现显示与否，这样的话已选规格出现的顺序是固定的。
+ */
 var dls=document.querySelectorAll("dl:not(.select)");
 var selected=document.querySelector(".select");
 
