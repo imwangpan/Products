@@ -10,8 +10,8 @@ button{
 ul{
 	width: 400px;
 	padding: 20px;
-	box-shadow: 0 0 10px #000000;
 	margin: 100px auto;
+	box-shadow: 0 0 10px #000000;
 	background: #fffcf4;
 }
 ul li{
@@ -21,6 +21,8 @@ ul li{
 	box-shadow: 0 0 6px #000000;
 	/*background: #61a56c;*/
 	margin: 20px 0;
+	position: relative;
+	top: 0;
 }
 
 ul li.red,ul li.red button{
