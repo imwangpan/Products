@@ -1,0 +1,68 @@
+ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+button{
+	padding: 0;
+	outline:none;
+}
+ul{
+	width: 400px;
+	padding: 20px;
+	box-shadow: 0 0 10px #000000;
+	margin: 100px auto;
+	background: #fffcf4;
+}
+ul li{
+	font-size: 0;
+	width: 400px;
+	border-radius: 5px;
+	box-shadow: 0 0 6px #000000;
+	/*background: #61a56c;*/
+	margin: 20px 0;
+}
+
+ul li.red,ul li.red button{
+	background: #de5347;
+}
+ul li.red button:hover{
+	color: #de5347;
+}
+ul li.yellow,ul li.yellow button{
+	background: #ffce44;
+}
+ul li.yellow button:hover{
+	color: #ffce44;
+}
+ul li.blue,ul li.blue button{
+	background: #4c8bf5;
+}
+ul li.blue button:hover{
+	color: #4c8bf5;
+}
+ul li.green,ul li.green button{
+	background: #19a15f;
+}
+ul li.green button:hover{
+	color: #19a15f;
+}
+ul li button:hover{
+	background: #FFFFFF;
+}
+ul li span{
+	font: 20px/50px "微软雅黑";
+	color: #FFFFFF;
+	margin-left: 15px;
+	width: 250px;
+	display: inline-block;
+}
+ul li button{
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	box-shadow: 0 0 5px #FFFFFF;
+	margin-right: 10px;
+	font: 16px/26px "微软雅黑";
+	padding: 0 10px;
+	cursor: pointer;
+}
