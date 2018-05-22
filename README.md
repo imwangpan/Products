@@ -23,3 +23,5 @@
 [数组排序照片墙](https://imwangpan.github.io/Products/%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%E7%85%A7%E7%89%87%E5%A2%99/index.html)
 
 [查找替换](https://imwangpan.github.io/Products/%E6%9F%A5%E6%89%BE%E6%9B%BF%E6%8D%A2/index.html)
+
+[规格选择](https://imwangpan.github.io/Products/%E8%A7%84%E6%A0%BC%E9%80%89%E6%8B%A9/index.html)
