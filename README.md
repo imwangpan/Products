@@ -26,4 +26,4 @@
 
 [规格选择](https://imwangpan.github.io/Products/%E8%A7%84%E6%A0%BC%E9%80%89%E6%8B%A9/index.html)
 
-[位置交换运动](https://imwangpan.github.io/Products/%E4%BD%8D%E7%BD%AE%E4%BA%A4%E6%8D%A2%E8%BF%90%E5%8A%A8/index.html)
+[改变标签位置的运动](https://imwangpan.github.io/Products/%E6%94%B9%E5%8F%98%E6%A0%87%E7%AD%BE%E4%BD%8D%E7%BD%AE%E7%9A%84%E8%BF%90%E5%8A%A8/index.html)
