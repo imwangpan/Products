@@ -29,7 +29,7 @@ var key={
 var maxHeight=window.innerHeight-box.offsetHeight;
 var maxWidth=window.innerWidth-box.offsetWidth;
 var L=0,T=0;
-console.log(maxHeight,maxWidth)
+
 window.onresize=function(){
 	//窗口大小变化后，重新获取一下值
 	maxHeight=window.innerHeight-box.offsetHeight;
@@ -64,6 +64,7 @@ setInterval(function(){
 	}
 	
 	if(key[38]||key[87]){
+		//定时器每隔一段时间触发，代码每次走到这里时，都是先获取到最新值，然后减 5，再限制值的范围，最后将其设置为方块的定位值。
 		T=box.offsetTop-5<0?0:box.offsetTop-5
 		box.style.top=T+'px';
 	}
@@ -84,6 +85,7 @@ setInterval(function(){
 box.onmousedown=function(event){
 	var X=event.pageX-box.offsetLeft
 	var Y=event.pageY-box.offsetTop
+	//这里把鼠标移动事件添加到 document 身上，可以避免鼠标快速移动时，鼠标从方块身上移出时引发的异常
 	document.onmousemove=function(event){
 		L=limits(event.pageX-X,'left')
 		T=limits(event.pageY-Y,'top')
