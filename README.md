@@ -29,3 +29,5 @@
 [改变标签位置的运动](https://imwangpan.github.io/Products/%E6%94%B9%E5%8F%98%E6%A0%87%E7%AD%BE%E4%BD%8D%E7%BD%AE%E7%9A%84%E8%BF%90%E5%8A%A8/index.html)
 
 [键鼠控制方块移动](https://imwangpan.github.io/Products/%E9%94%AE%E9%BC%A0%E6%8E%A7%E5%88%B6%E6%96%B9%E5%9D%97%E7%A7%BB%E5%8A%A8/index.html)
+
+[键盘控制图片翻页](https://imwangpan.github.io/Products/%E9%94%AE%E7%9B%98%E6%8E%A7%E5%88%B6%E5%9B%BE%E7%89%87%E7%BF%BB%E9%A1%B5/index.html)
