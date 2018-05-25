@@ -4,7 +4,7 @@ var w=box.offsetWidth
 var moving=true
 
 document.onkeydown=function(ev){
-	console.log(ev.keyCode)
+	//console.log(ev.keyCode)
 	if(!moving){
 		return
 	}
@@ -16,7 +16,7 @@ document.onkeydown=function(ev){
 		case 37:		//左
 		case 65:		//A
 		//这里采用的是多 case 单一操作写法，多个 case 条件中只要有任意一个条件成立，都会执行下面的代码，直到遇到 break 停止。
-		//注意这里不能写成 case 37||65: ，貌似也是或者的意思，但是并不等价于 ev.keyCode===37||ev.keyCode===65，而是会用 ev.keyCode 和 37||65 的返回值比较，而 37||65 返回的永远都是 37。
+		//注意这里不能写成 case 37||65:（或者 ev.keyCode===37||ev.keyCode===65），貌似都是是或者的意思，但是并不会得到我们想要的结果 。在 switch 语句中，会把 switch 参数的返回值和 case 后跟的表达式的返回值进行全等比较。在这里，会用 ev.keyCode 和 37||65 的返回值进行全等比较，而 37||65 返回的永远都是 37。
 		
 			box.style.width=w*lis.length+'px';		//先让图片横着排
 			move(box,{left:-w},400,'linear',function(){
