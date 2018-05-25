@@ -15,7 +15,8 @@ document.onkeydown=function(ev){
 
 		case 37:		//左
 		case 65:		//A
-		//这里采用的是
+		//这里采用的是多 case 单一操作写法，多个 case 条件中只要有任意一个条件成立，都会执行下面的代码，直到遇到 break 停止。
+		//注意这里不能写成 case 37||65: ，貌似也是或者的意思，但是并不等价于 ev.keyCode===37||ev.keyCode===65，而是会用 ev.keyCode 和 37||65 的返回值比较，而 37||65 返回的永远都是 37。
 		
 			box.style.width=w*lis.length+'px';		//先让图片横着排
 			move(box,{left:-w},400,'linear',function(){
