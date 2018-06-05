@@ -26,28 +26,36 @@ section{
 	height: 500px;
 	float: right;
 	position: relative;
-	background: #EEEEEE;
+	background: #eee8d5;
 	cursor: pointer;
+}
+#sliderBox{
+	width: 20px;
+	height: 448px;
+	margin-top: 26px;
 }
 #slider{
 	width: 20px;
 	height: 60px;
-	background: #bfbfbf;
+	background: #ddd6c1;
 	position: absolute;
 	top: 26px;
 	cursor: pointer;
-	
 }
-#slider:hover{
-	background: #a6a6a6;
+#slider:hover,#scrollBar .active{
+	background: #8c8364;
 }
 #scrollBar span{
-	color: #a3a3a3;
+	color: #8c8364;
 	cursor: pointer;
 }
 #scrollBar span:hover{
-	background: #787878;
-	color: #FFFFFF;
+	background: #8c8364;
+	color: #ddd6c1;
+}
+#upArrow{
+	position: absolute;
+	top: 0;
 }
 #downArrow{
 	position: absolute;
